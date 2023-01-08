@@ -1,0 +1,42 @@
+﻿@model AutorepairMVC.ViewModels.CarsViewModel
+@{
+    ViewData["Title"] = "Cars";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Информация об автомобилях в автомастерской</h1>
+</div>
+
+<!-- table for cars-->
+<table class="custom-table table-cars table-cars__home-page">
+    <caption>table with information about cars</caption>
+    <tr>
+        <th>Код авто</th>
+        <th>Марка</th>
+        <th>Мощность</th>
+        <th>Цвет</th>
+        <th>Гос.Номер</th>
+        <th>ФИО владелеца</th>
+        <th>Год</th>
+        <th>ВИН</th>
+        <th>Номер двигателя</th>
+        <th>Дата поступления</th>
+    </tr>
+    @foreach (var car in Model.Cars)
+    {
+        <tr>
+            <td>@car.CarId</td>
+            <td>@car.Brand</td>
+            <td>@car.Power</td>
+            <td>@car.Color</td>
+            <td>@car.StateNumber</td>
+            <td>@car.OwnerFIO</td>
+            <td>@car.Year</td>
+            <td>@car.VIN</td>
+            <td>@car.EngineNumber</td>
+            <td>@car.AdmissionDate.ToShortDateString()</td>
+        </tr>
+    }
+</table>

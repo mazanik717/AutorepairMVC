@@ -1,0 +1,51 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.custom-table {
+    border-collapse: collapse;
+    border: 3px solid #B58282;
+    font-family: "Lucida Grande", sans-serif;
+}
+
+.custom-table td {
+    padding: 5px;
+}
+.custom-table th {
+    padding: 5px 15px;
+}
+
+.custom-table th {
+    text-align: left;
+    font-size: 14px;
+}
+
+.custom-table tr:nth-child(2n) {
+    background: #e5d9d9;
+}
+
+.custom-table a {
+    color: #e57a7a;
+    text-decoration: none;
+    transition: .5s solid;
+}
+
+.custom-table a:hover {
+    color: #e04343;
+    font-weight: bold;
+}
